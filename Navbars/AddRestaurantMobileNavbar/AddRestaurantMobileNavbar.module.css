@@ -1,0 +1,173 @@
+/* ----------------------------------
+   Full-Height Sticky Navbar Header
+------------------------------------- */
+.navbarH {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-white);
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+}
+
+/* ----------------------------------
+   Main Menu Container
+------------------------------------- */
+.menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+/* ----------------------------------
+   Title (Brand) Styling
+------------------------------------- */
+.title {
+    margin: 0.5rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--color-title-text);
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.title:hover {
+    transform: scale(1.05);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* ----------------------------------
+   Mobile Menu Bar Icon
+------------------------------------- */
+.menuBar {
+    width: 20px;
+    height: 20px;
+    display: none;
+    margin: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.menuBar:hover {
+    transform: scale(1.2);
+}
+
+/* ----------------------------------
+   Default (Desktop) Navbar & Menu Items
+------------------------------------- */
+.navbar {
+    display: none;
+}
+
+.menuItem {
+    display: none;
+}
+
+/* ----------------------------------
+   Profile Section & Dropdown
+------------------------------------- */
+.profile {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.profile:hover {
+    transform: scale(1.05);
+}
+
+.profilePic {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profileName {
+    margin: 0 10px;
+    font-size: 1rem;
+    color: var(--color-title-text);
+}
+
+/* ----------------------------------
+   Arrow Icon Sizes
+------------------------------------- */
+.downArrow {
+    width: 20px;
+    height: 20px;
+}
+
+.rightArrow {
+    width: 15px;
+    height: 15px;
+}
+
+/* ----------------------------------
+   Options Box & Options Links
+------------------------------------- */
+.optionsBox {
+    margin-top: 1.5rem;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 30px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 450;
+    transition: color 0.3s ease;
+}
+
+.options:hover {
+    color: var(--color-title-text);
+}
+
+/* ----------------------------------
+   Utility Classes
+------------------------------------- */
+.dnone {
+    display: none;
+}
+
+/* ----------------------------------
+   Responsive Styles for Mobile (max-width: 480px)
+------------------------------------- */
+@media all and (max-width: 480px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        margin-top: 1.5rem;
+        padding: 0 20px;
+    }
+    
+    .menuItem {
+        color: var(--color-black);
+        font-weight: 400;
+        display: flex;
+        justify-content: space-between;
+        text-decoration: none;
+        margin: 1rem;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .menuItem:hover {
+        background-color: var(--bg-ash);
+        transform: scale(1.05);
+    }
+    
+    .menuBar {
+        display: block;
+    }
+}
